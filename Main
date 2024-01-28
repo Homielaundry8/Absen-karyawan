@@ -1,0 +1,70 @@
+git clone <URL_Repository>
+git add .
+git commit -m "Menambahkan fitur absensi karyawan"
+git push origin master
+git clone https://github.com/username/absensi-karyawan.git
+absensi-karyawan/
+├── src/
+│   ├── main.py
+│   ├── employee.py
+├── docs/
+│   ├── README.md
+├── .gitignore
+├── LICENSE
+├── README.md
+git add .
+git commit -m "Menambahkan file utama"
+git push origin master
+# Absensi Karyawan
+
+Proyek ini adalah aplikasi sederhana untuk mencatat absensi karyawan.
+
+## Cara Menggunakan
+
+1. Install dependencies dengan menjalankan perintah: `pip install -r requirements.txt`.
+2. Jalankan aplikasi dengan perintah: `python src/main.py`.
+
+## Struktur Direktori
+
+- `src/`: Direktori kode sumber.
+  - `main.py`: File utama aplikasi.
+  - `employee.py`: File terkait karyawan.
+- `docs/`: Direktori untuk dokumentasi proyek.
+- `.gitignore`: File pengaturan Git untuk mengabaikan file tertentu.
+- `LICENSE`: Lisensi proyek.
+# employee.py
+
+class Employee:
+    def __init__(self, nama, id_karyawan):
+        self.nama = nama
+        self.id_karyawan = id_karyawan
+        self.absensi = []
+
+    def catat_kehadiran(self, tanggal):
+        self.absensi.append(tanggal)
+# main.py
+from employee import Employee
+
+def main():
+    karyawan1 = Employee("John Doe", "EMP001")
+    karyawan1.catat_kehadiran("2024-01-28")
+
+    print(f"{karyawan1.nama} - Absensi: {karyawan1.absensi}")
+
+if __name__ == "__main__":
+    main()
+## Cara Menggunakan
+
+1. Install dependencies dengan menjalankan perintah: `pip install -r requirements.txt`.
+2. Jalankan aplikasi dengan perintah: `python src/main.py`.
+
+## Struktur Direktori
+
+- `src/`: Direktori kode sumber.
+  - `main.py`: File utama aplikasi.
+  - `employee.py`: File terkait karyawan.
+- `docs/`: Direktori untuk dokumentasi proyek.
+- `.gitignore`: File pengaturan Git untuk mengabaikan file tertentu.
+- `LICENSE`: Lisensi proyek.
+
+
